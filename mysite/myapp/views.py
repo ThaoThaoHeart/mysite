@@ -7,4 +7,4 @@ def index(request):
     context = {
         'models': models,
     }
-    return render(request, 'models/index.html', context)
+    return render(request, 'myapp/index.html', context)
