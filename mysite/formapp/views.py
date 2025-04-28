@@ -1,9 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import ContactForm
 # Create your views here.
-def home_view(request):
-    return render(request, 'formapp/home.html')
-
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

@@ -9,7 +9,7 @@
 </head>
 <body>
     <script src="{% static 'js/scripts.js' %}"></script>
-    <img src="{% static 'images/MyImage.png' %}" alt="MyImage" class="image">
+    <!-- <img src="{% static 'images/MyImage.png' %}" alt="MyImage" class="image"> -->
     <div class="resume">
         <header class="resume-header">
             <h1>Jenny Hoang</h1>
@@ -63,7 +63,8 @@
         </section>
         <section class="resume-section">
             <h2>Projects</h2>
-            <p>To be published...</p>
+            <form action="{% url 'contact' %}" method="get">
+                <button type="submit" class="btn">Go to Form</button>
         </section>
     </div>
 </body>
