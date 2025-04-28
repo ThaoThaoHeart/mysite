@@ -6,3 +6,10 @@ A place for notes
 
 - Markdown
 - CSS
+
+## sqlite vs postgresql
+
+When do we use sqlite?
+When do we use postgresql?
+
+- Install Sentry
