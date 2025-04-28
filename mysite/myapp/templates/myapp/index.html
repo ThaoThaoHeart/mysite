@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <title>Jenny's Site</title>
+</head>
+<body>
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <!-- <img src="{% static 'images/MyImage.png' %}" alt="MyImage" class="image"> -->
+    <div class="resume">
+        <header class="resume-header">
+            <h1>Jenny Hoang</h1>
+            <p>Software Developer | Jennyhoang1144@gmail.com | (226) 246 – 1144</p>
+            <a href="https://www.linkedin.com/in/jenny-hoang-dev/" target="">
+                <img src="https://img.icons8.com/?size=100&id=60ZV_wYC0BM2&format=png&color=000000" alt="LinkedIn Icon" class="linkedin-icon">
+            </a>
+            <a href="https://github.com/ThaoThaoHeart" target="">
+                <img src="https://img.icons8.com/?size=100&id=46565&format=png&color=000000" alt="GitHub Icon" class="github-icon">
+            </a>
+        </header>
+        <section class="resume-section">
+            <h2>Summary</h2>
+            <p>Experienced software developer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success. Skilled in various programming languages and frameworks.</p>
+        </section>
+        <section class="resume-section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages: Python, JavaScript</li>
+                <li>Frameworks: Django, React</li>
+                <li>Tools: Git, Docker</li>
+                <li>Databases: MySQL, PostgreSQL</li>
+            </ul>
+        </section>
+        <section class="resume-section">
+            <h2>Experience</h2>
+            <div class="job">
+                <h3>Hub International - Software Developer </h3>
+                <p>2022 - Present</p>
+                <ul>
+                    <li>Plan, develop and test new applications following industry and team best practices.</li>
+                    <li>Collaborate with team members to plan, document, estimate and execute projects.</li>
+                    <li>Prioritizes available tasks and personal workload to meet the team's goals and respond to emergency situations effectively.</li>
+                    <li>Utilize Django Framework and React</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Saint Clair College - Tutor</h3>
+                <p>2021-2022</p>
+                <ul>
+                    <li>Assist students in subjects such as: Java, Swift, Android Development, iOS Development, Web Development...etc.</li>
+                    <li>Support students to be academically successful.</li>
+                    <li>Build confidence in students' academic skills.</li>
+                    <li>Educated in: HTML/CSS/Java/Javascript/React/Flutter/Unity/C#/Blender/iOS/Android/Linux/PostgresSQL/MySQL</li>
+                </ul>
+            </div>
+        </section>
+        <section class="resume-section">
+            <h2>Education</h2>
+            <p>Saint Clair College – Mobile Application Development, 2019 - 2022</p>
+        </section>
+        <section class="resume-section">
+            <h2>Projects</h2>
+            <form action="{% url 'contact' %}" method="get">
+                <button type="submit" class="btn">Go to Form</button>
+        </section>
+    </div>
+</body>
+</html>

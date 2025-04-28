@@ -1,0 +1,115 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.resume {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-header {
+    text-align: center;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.resume-header h1 {
+    font-size: 2rem;
+    color: #007BFF;
+    margin: 0;
+}
+
+.resume-header p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.resume-section {
+    margin-bottom: 20px;
+}
+
+.resume-section h2 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.resume-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resume-section ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.resume-section ul li::before {
+    content: "•";
+    color: #007BFF;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.job h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+}
+
+.job p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0 10px;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* LinkIn Icon */
+.linkedin-icon {
+    width: 30px; 
+    height: 30px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.linkedin-icon:hover {
+    transform: scale(1.2); 
+}
+
+/* GitHub Icon */
+.github-icon {
+    width: 30px; 
+    height: 30px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.github-icon:hover {
+    transform: scale(1.2); 
+}
+
