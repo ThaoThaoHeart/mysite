@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.urls import path, include
 
 # Verify your Sentry installation
-def trigger_error(request):
-    division_by_zero = 1 / 0
+# def trigger_error(request):
+#     division_by_zero = 1 / 0
+
+    # path('sentry-debug/', trigger_error),  # Sentry test route
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myapp.urls')),
     path('form/', include('formapp.urls')),
-    path('sentry-debug/', trigger_error),  # Sentry test route
+    path('account/', include('authapp.urls')),
 ]

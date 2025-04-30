@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import sentry_sdk
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp.apps.MyappConfig',
     'formapp.apps.FormappConfig',
+    'authapp',
 ]
 
 MIDDLEWARE = [
@@ -127,12 +129,12 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR / 'static'),
 )
 
+LOGIN_REDIRECT_URL = 'home'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-import sentry_sdk
 
 sentry_sdk.init(
     dsn="https://9e0210778e9e56d2a0d8d1e4cac0f0cc@o4509232482811904.ingest.us.sentry.io/4509232485564416",

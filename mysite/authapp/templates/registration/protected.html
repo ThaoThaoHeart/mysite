@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Protected Page</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">  
+</head>
+<body>
+    <h1>Protected Page</h1>
+    <p>Welcome to the protected page, {{ request.user.username }}!</p>
+    <a href="{% url 'home' %}">Go to Home</a>
+    <form action="{% url 'logout' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>                             

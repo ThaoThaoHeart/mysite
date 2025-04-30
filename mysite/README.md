@@ -10,6 +10,10 @@ A place for notes
 ## sqlite vs postgresql
 
 When do we use sqlite?
-When do we use postgresql?
+-local storage
+-embedded database
+-small size projects
 
-- Install Sentry
+When do we use postgresql?
+-Client-server system (allows many client to connect)
+-larger scale projects
