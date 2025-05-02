@@ -14,7 +14,7 @@
 <body>
     <div class="centered-content">
         <h1>Login</h1>
-        <form action="{% url 'login'}" method="POST">
+        <form action="{% url 'login'%}" method="POST">
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ next }}">
             <div class="form-group">
