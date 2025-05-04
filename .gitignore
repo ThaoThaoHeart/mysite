@@ -4,3 +4,5 @@
 *.pyc
 .python-version
 node_modules
+db.sqlite3
+.env

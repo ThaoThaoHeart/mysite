@@ -137,7 +137,7 @@ LOGIN_REDIRECT_URL = 'home'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 sentry_sdk.init(
-    dsn="https://9e0210778e9e56d2a0d8d1e4cac0f0cc@o4509232482811904.ingest.us.sentry.io/4509232485564416",
+    dsn=os.getenv('SENTRY_DSN')
     # Add data like request headers and IP for users,
     # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
     send_default_pii=True,
