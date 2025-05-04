@@ -10,14 +10,14 @@ def register_view(request):
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
-            username = form.cleaned_data("username")
-            password = form.cleaned_data("password")
-            User.objects.create_user(
+            username = form.cleaned_data["username"]
+            password = form.cleaned_data["password"]
+            new_user = User.objects.create_user(
                 username=username,
                 password=password,
             )
-            login(request, username)
-            return redirect('home')
+            login(request, new_user)
+            return redirect('account')
     else:
         form = UserRegistrationForm()
     return render(request, 'accounts/register.html', {'form': form})
@@ -30,8 +30,7 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            next_url = request.POST.get('next') or request.GET.get('home')
-            return redirect(next_url)
+            return redirect('account')
         else:
             error_message = 'Invalid credentials'
     return render(request, 'accounts/login.html', {'error': error_message})
@@ -41,7 +40,7 @@ def logout_view(request):
         logout(request)
         return redirect('login')
     else:
-        return redirect('home')
+        return redirect('account')
     
 @login_required
 def home(request):
